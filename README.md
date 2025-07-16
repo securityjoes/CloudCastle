@@ -38,6 +38,8 @@ Each pie will assist in understanding the overall risk, the services running and
 
 ## 📝 Help us improve! Send your suggestions or reports.
 
+**Submit a request here: [CloudCastle Request](https://github.com/securityjoes/CloudCastle/issues/new)**
+
 **Contact us at: cloudcastle@securityjoes.com**
 
 ## 🚨 Need Help with a Security Incident?
