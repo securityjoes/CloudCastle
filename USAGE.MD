@@ -129,6 +129,6 @@ typer
 
 You should see output like:
 
-![image](https://github.com/user-attachments/assets/c7d6ae68-2dd1-4270-a7d9-67bffd65ec3e)
+![cliusage](https://raw.githubusercontent.com/securityjoes/CloudCastle/main/images/cloudcastle_usage.png)
 
 Each account will show a status indicating whether the role assumption was successful.
