@@ -1,0 +1,5 @@
+pyfiglet
+requests
+Jinja2
+boto3
+typer

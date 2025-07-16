@@ -1,0 +1,127 @@
+{
+  "iam": {
+    "no mfa": {
+      "technique_id": "T1556",
+      "name": "Modify Authentication Process",
+      "url": "https://attack.mitre.org/techniques/T1556/"
+    },
+    "admin access": {
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "url": "https://attack.mitre.org/techniques/T1078/"
+    },
+    "access key": {
+      "technique_id": "T1552.001",
+      "name": "Unsecured Credentials: Credentials in Files",
+      "url": "https://attack.mitre.org/techniques/T1552/001/"
+    }
+  },
+  "ec2": {
+    "public_instance": {
+      "technique_id": "T1526",
+      "name": "Cloud Service Discovery",
+      "url": "https://attack.mitre.org/techniques/T1526/"
+    },
+    "open_ports": {
+      "technique_id": "T1046",
+      "name": "Network Service Scanning",
+      "url": "https://attack.mitre.org/techniques/T1046/"
+    }
+  },
+  "s3": {
+    "public_bucket": {
+      "technique_id": "T1530",
+      "name": "Data from Cloud Storage Object",
+      "url": "https://attack.mitre.org/techniques/T1530/"
+    },
+    "no_logging": {
+      "technique_id": "T1562.002",
+      "name": "Impair Defenses: Disable Cloud Logging",
+      "url": "https://attack.mitre.org/techniques/T1562/002/"
+    },
+    "open_bucket_policy": {
+      "technique_id": "T1078.004",
+      "name": "Valid Accounts: Cloud Accounts",
+      "url": "https://attack.mitre.org/techniques/T1078/004/"
+    }
+  },
+  "vpc": {
+    "default_vpc": {
+      "technique_id": "T1562.007",
+      "name": "Impair Defenses: Disable or Modify Cloud Firewall",
+      "url": "https://attack.mitre.org/techniques/T1562/007/"
+    }
+  },
+  "gateways": {
+    "public_gateway": {
+      "technique_id": "T1133",
+      "name": "External Remote Services",
+      "url": "https://attack.mitre.org/techniques/T1133/"
+    }
+  },
+  "route53": {
+    "public_domain": {
+      "technique_id": "T1583.001",
+      "name": "Acquire Infrastructure: Domains",
+      "url": "https://attack.mitre.org/techniques/T1583/001/"
+    }
+  },
+  "cloudtrail": {
+    "trail_disabled": {
+      "technique_id": "T1562.008",
+      "name": "Disable Cloud Audit Logs",
+      "url": "https://attack.mitre.org/techniques/T1562/008/"
+    }
+  },
+  "secretsmanager": {
+    "unencrypted_secret": {
+      "technique_id": "T1552.004",
+      "name": "Unsecured Credentials: Private Keys",
+      "url": "https://attack.mitre.org/techniques/T1552/004/"
+    }
+  },
+  "rds": {
+    "public_rds_instance": {
+      "technique_id": "T1005",
+      "name": "Data from Local System",
+      "url": "https://attack.mitre.org/techniques/T1005/"
+    },
+    "no_encryption": {
+      "technique_id": "T1552.002",
+      "name": "Unsecured Credentials: Credentials in Registry",
+      "url": "https://attack.mitre.org/techniques/T1552/002/"
+    }
+  },
+  "rds": {
+    "publicly accessible": {
+        "technique_id": "T1530",
+        "name": "Data from Cloud Storage",
+        "url": "https://attack.mitre.org/techniques/T1530/"
+    },
+    "storage encryption disabled": {
+        "technique_id": "T1552.004",
+        "name": "Unsecured Credentials: Cloud Instance Metadata API",
+        "url": "https://attack.mitre.org/techniques/T1552/004/"
+    },
+    "no backup retention": {
+        "technique_id": "T1491",
+        "name": "Defacement",
+        "url": "https://attack.mitre.org/techniques/T1491/"
+    },
+    "iam db auth disabled": {
+        "technique_id": "T1078",
+        "name": "Valid Accounts",
+        "url": "https://attack.mitre.org/techniques/T1078/"
+    },
+    "multi-az disabled": {
+        "technique_id": "T1499",
+        "name": "Endpoint Denial of Service",
+        "url": "https://attack.mitre.org/techniques/T1499/"
+    },
+    "no log exports enabled": {
+        "technique_id": "T1562.002",
+        "name": "Impair Defenses: Disable Windows Event Logging",
+        "url": "https://attack.mitre.org/techniques/T1562/002/"
+    }
+  }
+}

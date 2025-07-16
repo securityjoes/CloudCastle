@@ -1,0 +1,85 @@
+# CloudCastle Cloud Security Posture Scanner - Release Notes
+
+# 📦 CloudCastle Release Notes
+
+## CloudCastle v1.5 – May 2025
+
+- Scoring change on all scanners to match risk potential
+- Fixed MITRE ATT&CK integration (now dynamic matching + enrichment of local db!)
+- Improved S3 public access detection with region-aware logic
+- Updated IAM/EC2/RDS/S3 logic to reduce false positives
+- HTML report stability improved (gateway handling, error tolerance)
+- STS-based multi-account scanning now fully functional
+
+## 🚀 Version 1.4 - (2025-04-25)
+
+### 🔄 Core Enhancements:
+- Introduced **multi-account scanning support** for AWS via dynamic SSO session handling.
+- Implemented **account-aware logging**, storing results under `logs/aws/<account_id>/logs.json`.
+- Added dynamic **session management** with profile auto-detection and error handling fallback.
+- Removed the need for hardcoded roles or profiles — SSO sessions are now fully automated.
+- Each scan now logs under the correct account context with isolated storage and export mapping.
+
+### 🧠 Reporting and UI:
+- Major refactor of `export.py` to dynamically build HTML sections per account.
+- Introduced **account buttons** to toggle between account reports in the HTML.
+- Added average risk color coding to account selectors for quick posture insights.
+- Account names now appear instead of IDs, improving readability for stakeholders.
+
+### 📈 Logging and Structure:
+- Restructured logger to support scan-specific data like `scanned_count`, `failed_count`, and `mitre_notes`.
+- Each scan result now includes contextual metadata per scan type.
+- Added support for rich Jinja error tracing to simplify debugging HTML exports.
+
+### 🧪 Stability and Debugging:
+- Improved error messages across session, auth, and export modules.
+- Prevented scanning of accounts without valid profiles using pre-checks.
+- Enhanced validation of scan data prior to rendering report to avoid malformed exports.
+
+## v1.3.1 - March 30, 2025
+### Added
+- 🛡️ MITRE ATT&CK integration:
+  ✅ MITRE recommendations are now dynamically extracted from scan results using keywords.
+  ✅ Added MITRE mapping logic via `mitre.py` and `mitre_db.json`.
+  ✅ Linked techniques rendered in each section of the HTML report.
+- 🌐 Cloud provider selector added to CLI (`menu.py`):
+  ✅ User selects AWS, Azure, or GCP (placeholders for Azure/GCP).
+  ✅ Then selects scan type from relevant cloud menu.
+
+### Changed
+- ✅ Export system now shows `mitre_recommendations` cleanly under each scan section.
+- ✅ JSON logs now support MITRE insights at scan-type level.
+
+### Fixed
+- ✅ Export template now supports rendering of findings alongside each MITRE link.
+
+### Known Issues
+- MITRE keyword matching still depends on wording consistency.
+- Additional normalization of log data in progress for future accuracy.
+
+## v1.3.0 - March 16, 2025
+- ✅ Introduced cloud provider switching in the HTML report (AWS, Azure, GCP) with interactive buttons.
+- ✅ Implemented section toggling to display individual cloud risks per provider.
+- ✅ Improved navigation with risk-based anchors for easier access to scan results.
+- ✅ Refined the HTML UI with better alignment, improved button interactions, and hover effects.
+- ✅ Enhanced CSS styling to provide a professional SaaS-like look.
+- ✅ Fixed alignment issues with cloud provider buttons in the report header.
+- ✅ Ensured IAM user status detection correctly identifies disabled users.
+- ✅ Improved logging to avoid missing scan results in `logs.json`.
+
+## v1.2.1 - March 12, 2025
+- ✅ Improved HTML report with a modern dark-themed UI.
+- ✅ Risk scoring is now more accurate for EC2 and IAM findings.
+- ✅ EC2 and Gateways results are now correctly saved in `logs.json` and appear in the report.
+- ✅ Old IAM access key detection is now properly handled.
+
+## v1.2.0 - March 4, 2025
+- ✅ Improved AWS authentication flow (skip auth if already logged in)
+- ✅ Added version tracking with release-notes.txt
+- ✅ Fixed incorrect risk scoring logic
+- ✅ Enhanced logging for better debugging
+
+## v1.1.0 - Feb 28, 2025
+- ✅ Added support for Route 53 security scan
+- ✅ Improved IAM user risk detection
+- ✅ Fixed EC2 region misconfiguration issue
